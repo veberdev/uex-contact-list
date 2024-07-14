@@ -39,6 +39,6 @@ module Authenticable
   private
 
   def unauthorized_entity
-    render json: { message: 'Você precisa estar logado.' }, status: :unauthorized
+    render json: { message: 'You must be logged-in.' }, status: :unauthorized
   end
 end
