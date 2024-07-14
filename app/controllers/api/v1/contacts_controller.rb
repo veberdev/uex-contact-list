@@ -34,6 +34,12 @@ class Api::V1::ContactsController < ApplicationController
     head :no_content
   end
 
+  def search
+    query = params[:query]
+    @contacts = @user.contacts.where('name LIKE ? OR cpf LIKE ?', "%#{query}%", "%#{query}%").order(name: :asc)
+    render json: @contacts
+  end
+
   private
 
   def set_contact
