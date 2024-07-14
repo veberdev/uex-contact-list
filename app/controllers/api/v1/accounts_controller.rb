@@ -17,6 +17,18 @@ class Api::V1::AccountsController < ApplicationController
     end
   end
 
+  def destroy
+    user = User.find(current_user.id)
+
+    if user && user.authenticate(params[:password])
+      user.destroy
+      # needs to implement on the users side: destroy jwt token.
+      render json: { message: 'User successfully deleted.' }, status: :ok
+    else
+      render json: { errors: ['Invalid password.'] }, status: :unauthorized
+    end
+  end
+
   private
 
   def registration_params
