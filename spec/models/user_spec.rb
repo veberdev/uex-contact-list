@@ -3,6 +3,7 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   describe 'validations and relationships' do
     it { should validate_presence_of(:email) }
+    it { is_expected.to have_many(:contacts) }
   end
 
   # tests with factories:
