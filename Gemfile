@@ -5,6 +5,7 @@ ruby '3.0.0'
 gem 'bcrypt', '~> 3.1.7'
 gem 'bootsnap', require: false
 gem 'cpf_cnpj'
+gem 'dotenv' 
 gem 'geocoder'
 gem 'jwt'
 gem 'kaminari'
