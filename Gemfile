@@ -7,6 +7,7 @@ gem 'bootsnap', require: false
 gem 'cpf_cnpj'
 gem 'dotenv' 
 gem 'geocoder'
+gem 'httparty'
 gem 'jwt'
 gem 'kaminari'
 gem 'pg', '~> 1.1'

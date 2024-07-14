@@ -4,6 +4,7 @@ Rails.application.routes.draw do
       resources :contacts
       resources :accounts, only: [:index, :create, :destroy]
       resources :sessions, only: :create
+      get 'addresses/:cep', to: 'addresses#search_by_cep'
     end
   end
 end
