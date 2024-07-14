@@ -1,0 +1,12 @@
+AllCops:
+  Exclude:
+    - 'config/**/*'
+    - '**/bin/**/*'
+    - 'app/mailers/**/*'
+    - 'test/**/*'
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
