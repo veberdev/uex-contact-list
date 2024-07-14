@@ -1,4 +1,6 @@
 class Api::V1::AccountsController < ApplicationController
+  skip_before_action :authenticate_user!, only: :create
+
   def create
     user = User.new(registration_params)
 
