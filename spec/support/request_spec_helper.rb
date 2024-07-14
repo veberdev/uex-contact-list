@@ -4,6 +4,6 @@ module RequestSpecHelper
   end
 
   def token_generator(user)
-    JWT.encode({ sub: user.id }, Rails.application.credentials.read)
+    JWT.encode({ user_id: user.id }, Rails.application.credentials.read)
   end
 end
