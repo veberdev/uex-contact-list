@@ -1,6 +1,11 @@
 class Api::V1::AccountsController < ApplicationController
   skip_before_action :authenticate_user!, only: :create
 
+  def index
+    # should i revert this action and tests?
+    render json: { message: 'healty check!' }, status: :ok
+  end
+
   def create
     user = User.new(registration_params)
 
