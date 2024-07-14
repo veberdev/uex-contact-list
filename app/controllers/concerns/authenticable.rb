@@ -32,6 +32,10 @@ module Authenticable
     unauthorized_entity unless authenticate
   end
 
+  def get_current_user
+    authenticate
+  end
+
   private
 
   def unauthorized_entity
