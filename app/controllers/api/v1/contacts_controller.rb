@@ -3,6 +3,8 @@ class Api::V1::ContactsController < ApplicationController
 
   def index
     @contacts = current_user.contacts
+                            .order(name: :asc)
+                            .page(params[:page])
     render json: @contacts
   end
 

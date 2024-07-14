@@ -5,6 +5,7 @@ ruby '3.0.0'
 gem 'bcrypt', '~> 3.1.7'
 gem 'bootsnap', require: false
 gem 'jwt'
+gem 'kaminari'
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 gem 'rack-cors'
