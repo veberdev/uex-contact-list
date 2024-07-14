@@ -13,4 +13,7 @@ Style/Documentation:
 
 Style/ClassAndModuleChildren:
   Enabled: false
+
+Metrics/BlockLength:
+  Max: 100
   
