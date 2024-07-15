@@ -35,8 +35,9 @@ class Api::V1::ContactsController < ApplicationController
   end
 
   def search
+    binding.pry
     query = params[:query]
-    @contacts = @user.contacts.where('name LIKE ? OR cpf LIKE ?', "%#{query}%", "%#{query}%").order(name: :asc)
+    @contacts = current_user.contacts.where('name LIKE ? OR cpf LIKE ?', "%#{query}%", "%#{query}%").order(name: :asc)
     render json: @contacts
   end
 
