@@ -1,24 +1,23 @@
-# README
+## Description
+* This app uses Ruby 3.0.0 and Rails ~> 7.0.8.4
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* The API enables users to manage a contact list with automatic geolocation integration.
+* It utilizes the ViaCEP API to retrieve address details based on zip codes. 
 
-Things you may want to cover:
+## Usage Instructions
 
-* Ruby version
+#### rails db:seed will create a user with 10 contacts associated:
 
-* System dependencies
+`email/login: admin@admin.com`  
+`password: admin`
 
-* Configuration
+#### The project uses Rspec for testing. To run it run in the root project:
 
-* Database creation
+`bundle exec rspec` It will run all the test suite.
 
-* Database initialization
+#### it uses google geolocalization API
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+create your own and add as `GOOGLE_MAPS_API_KEY`, which will result in `ENV['GOOGLE_MAPS_API_KEY']` for use
+  
+## Api documentation:
+Explore the `API endpoints` and usage instructions on [Postman Documentation.](https://documenter.getpostman.com/view/5603221/2sA3kPoizL)
