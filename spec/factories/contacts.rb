@@ -1,6 +1,5 @@
 FactoryBot.define do
   factory :contact do
-    user { nil }
     name { Faker::Name.name }
     cpf { Faker::Number.unique.number(digits: 11) }
     phone { Faker::PhoneNumber.phone_number }
