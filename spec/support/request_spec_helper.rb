@@ -1,6 +1,6 @@
 module RequestSpecHelper
   def json_body
-    @json_body ||= JSON.parse(response.body, symbolize_names: true)
+    JSON.parse(response.body)
   end
 
   def token_generator(user)
