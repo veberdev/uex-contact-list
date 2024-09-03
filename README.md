@@ -1,4 +1,10 @@
 ## Description
+This is a application for a technical test. 
+
+The goal is to develop an api, which stores conctacts using google maps api to provide geolocalization.
+The time designed to develop this test is 48h.
+
+## Technical description
 * This app uses Ruby 3.0.0 and Rails ~> 7.0.8.4
 
 * The API enables users to manage a contact list with automatic geolocation integration.
